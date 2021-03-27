@@ -8,10 +8,8 @@ const capitalizeFirstLetters = (chain) =>{
 
   for (let i = 0; i < chain.length; i++){
 
-    if(i === 0){ 
-        chainResult += chain[0].toUpperCase();
-    }else if (chain[i-1] === ' '){
-        chainResult += chain[i].toUpperCase();   
+    if((i === 0) || (chain[i-1] === ' ')) { 
+        chainResult += chain[i].toUpperCase();
     } else {
         chainResult += chain[i]
     }
