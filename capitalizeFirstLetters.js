@@ -2,7 +2,22 @@ const assert = require('assert');
 
 //WRITE THE CODE HERE 
 
+const capitalizeFirstLetters = (chain) =>{
 
+    let chainResult = '';
+
+  for (let i = 0; i < chain.length; i++){
+
+    if(i === 0){ 
+        chainResult += chain[0].toUpperCase();
+    }else if (chain[i-1] === ' '){
+        chainResult += chain[i].toUpperCase();   
+    } else {
+        chainResult += chain[i]
+    }
+    }
+    return chainResult
+};
 
 // Check that capitalizeFirst is a function
 
